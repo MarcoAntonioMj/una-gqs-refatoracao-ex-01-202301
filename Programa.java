@@ -13,9 +13,9 @@ class Programa {
     pessoa.coletaNome(sc);
     pessoa.coletaIdade(sc);
 
-    erroTentativas = mensagem.realizaPerguntaVacinaEmDia(pesssoa);
+    erroTentativas = mensagem.realizaPerguntaVacinaEmDia(pessoa);
 
-    validacao.validacaoDasProximasPerguntas(pessoas);
+    validacao.validacaoDasProximasPerguntas(pessoa);
 
     validacao.calcularValidacaoFinal(erroTentativass);
 
