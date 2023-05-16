@@ -9,13 +9,13 @@ public class Pessoa {
   public String estaRetornandoViagem;
   public int porcentagemInfeccao;
   public String orientacaoFinal;
-
-  /*
-   * public void coletaNome(Pessoa pessoa, Scanner scanner) {
-   * System.out.println("\nInforme o seu nome: ");
-   * pessoa.nome = scanner.nextLine();
-   * }
-   */
+  public String nome; 
+  
+    public void coletaNome(Pessoa pessoa, Scanner scanner) {
+    System.out.println("\nInforme o seu nome: ");
+    pessoa.nome = scanner.nextLine();
+    }
+   
 
   public void coletaIdade(Pessoa pessoa, Scanner scanner) {
     System.out.println("\nInforme a sua idade: ");
