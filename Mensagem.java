@@ -110,7 +110,7 @@ public class Mensagem {
   }
 
   public void imprimirMensagemErro() {
-    System.out.println("Não foi possível realizar o ZZZZZZZZZZ." +
-        "Gentileza ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ.");
+    System.out.println("Não foi possível realizar a validação." +
+        "Por favor, verifique suas respostas e tente novamente.");
   }
 }
