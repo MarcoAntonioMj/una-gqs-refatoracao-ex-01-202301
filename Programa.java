@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 class Programa {
   public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
     boolean erroTentativas = false;
     Pessoa pessoa = new Pessoa();
     Mensagem mensagem = new Mensagem();
