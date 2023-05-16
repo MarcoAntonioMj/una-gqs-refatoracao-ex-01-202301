@@ -14,7 +14,7 @@ public class Validacao {
         mensagem.imprimirRelatorioFinal(pessoa);
       } else {
 
-        // Verifico a porcentagem de infecção
+       // Verifico a porcentagem de infecção
         if (pessoa.porcentagemInfeccao >= 90) {
           pessoa.orientacaoFinal = "Paciente crítico! Gentileza aguardar em lockdown por 10 dias para ser acompanhado.";
           mensagem.imprimirRelatorioFinal(pessoa);
