@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 class Programa {
   public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     boolean erroTentativas = false;
     Pessoa pessoa = new Pessoa();
     Mensagem mensagem = new Mensagem();
@@ -10,15 +10,15 @@ class Programa {
 
     System.out.println("\tRelatório Auxiliar de Controle de Infecções");
 
-    pessoa.coletaNome(sc);
-    pessoa.coletaIdade(sc);
+    pessoa.coletaNome(scanner);
+    pessoa.coletaIdade(scanner);
 
     erroTentativas = mensagem.realizaPerguntaVacinaEmDia(pessoa);
 
     validacao.validacaoDasProximasPerguntas(pessoa);
 
-    validacao.calcularValidacaoFinal(erroTentativass);
+    validacao.calcularValidacaoFinal(erroTentativas);
 
-    // scanner.close();
+    scanner.close();
   }
 }
