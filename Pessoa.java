@@ -10,14 +10,14 @@ public class Pessoa {
   public String orientacaoFinal;
   public String nome; 
   
-    public void coletaNome(Pessoa pessoa, Scanner scanner) {
+    public void coletaNome(Scanner scanner) {
     System.out.println("\nInforme o seu nome: ");
-    pessoa.nome = scanner.nextLine();
+    nome = scanner.nextLine();
     }
    
 
-  public void coletaIdade(Pessoa pessoa, Scanner scanner) {
+  public void coletaIdade(Scanner scanner) {
     System.out.println("\nInforme a sua idade: ");
-    pessoa.idade = scanner.nextInt();
+    idade = scanner.nextInt();
   }
 }
