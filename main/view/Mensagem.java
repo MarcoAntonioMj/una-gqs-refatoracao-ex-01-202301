@@ -1,4 +1,5 @@
 package main.view;
+
 import java.util.Scanner;
 
 import main.model.Pessoa;
@@ -56,17 +57,6 @@ public class Mensagem {
     System.out.println("\nEstá retornando de viagem do exterior?");
     pessoa.estaRetornandoViagem = lerRespostaValida(scanner);
     return contador == MAX_TENTATIVAS;
-  }
-
-  public void imprimirRelatorioFinal(Pessoa pessoa) {
-    System.out.println("\nNome: " + pessoa.nome);
-    System.out.println("Idade: " + pessoa.idade + " anos");
-    System.out.println("Cartão Vacinal em Dia: " + pessoa.cartaoVacinaEmDia);
-    System.out.println("Teve sintomas recentemente: " + pessoa.teveSintomasRecentemente);
-    System.out.println("Teve contato com pessoas infectadas: " + pessoa.teveContatoComPessoasSintomaticas);
-    System.out.println("Está retornando de viagem: " + pessoa.estaRetornandoViagem);
-    System.out.println("Porcentagem infecção: " + pessoa.porcentagemInfeccao);
-    System.out.println("Orientação Final: " + pessoa.orientacaoFinal);
   }
 
   public void imprimirMensagemErro() {

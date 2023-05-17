@@ -1,8 +1,9 @@
 package main.view;
-import java.util.Scanner;
 
+import java.util.Scanner;
 import main.controller.CalculoPorcentagem;
 import main.model.Pessoa;
+import main.Programa;
 
 public class Validacao {
   public void calcularValidacaoFinal(Pessoa pessoa, Mensagem mensagem, boolean erroTentativas) {
@@ -35,7 +36,7 @@ public class Validacao {
         } else {
           pessoa.orientacaoFinal = "Paciente crítico! Gentileza aguardar em lockdown por 10 dias para ser acompanhado.";
         }
-        mensagem.imprimirRelatorioFinal(pessoa);
+        Programa.imprimirRelatorioFinal(pessoa);
       }
     }
   }
