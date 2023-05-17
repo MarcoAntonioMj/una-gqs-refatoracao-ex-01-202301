@@ -1,4 +1,7 @@
+package main.view;
 import java.util.Scanner;
+
+import main.model.Pessoa;
 
 public class Mensagem {
 

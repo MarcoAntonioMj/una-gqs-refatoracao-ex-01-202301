@@ -1,4 +1,8 @@
+package main.view;
 import java.util.Scanner;
+
+import main.controller.CalculoPorcentagem;
+import main.model.Pessoa;
 
 public class Validacao {
   public void calcularValidacaoFinal(Pessoa pessoa, Mensagem mensagem, boolean erroTentativas) {

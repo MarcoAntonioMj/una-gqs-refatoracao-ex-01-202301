@@ -1,4 +1,9 @@
+package main;
 import java.util.Scanner;
+
+import main.model.Pessoa;
+import main.view.Mensagem;
+import main.view.Validacao;
 
 class Programa {
   public static void main(String[] args) {
