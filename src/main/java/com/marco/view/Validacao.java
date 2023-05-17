@@ -1,9 +1,9 @@
-package main.view;
-
+package com.marco.view;
 import java.util.Scanner;
-import main.controller.CalculoPorcentagem;
-import main.model.Pessoa;
-import main.Programa;
+
+import com.marco.Programa;
+import com.marco.controller.CalculoPorcentagem;
+import com.marco.model.Pessoa;
 
 public class Validacao {
   public void calcularValidacaoFinal(Pessoa pessoa, Mensagem mensagem, boolean erroTentativas) {

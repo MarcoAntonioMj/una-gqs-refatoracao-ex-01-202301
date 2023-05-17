@@ -1,20 +1,21 @@
-package Test;
+package com.marco;
 
-import java.util.Scanner;
+import org.junit.jupiter.api.Test;
 
-import main.controller.CalculoPorcentagem;
-import main.model.Pessoa;
-import main.view.Mensagem;
-import main.view.Validacao;
+import com.marco.controller.CalculoPorcentagem;
+import com.marco.model.Pessoa;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
-
-public class CalculoPorcentagemTest {
-
+/**
+ * Unit test for simple App.
+ */
+class AppTest {
+    /**
+     * Rigorous Test.
+     */
     @Test
-    public void testCalculaPorcentagem_retornandoViagem() {
+    void testCalculaPorcentagem_retornandoViagem() {
         Pessoa pessoa = new Pessoa();
         pessoa.estaRetornandoViagem = "SIM";
         pessoa.cartaoVacinaEmDia = "SIM";

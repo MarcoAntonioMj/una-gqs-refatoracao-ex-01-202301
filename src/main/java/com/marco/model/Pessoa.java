@@ -1,4 +1,4 @@
-package main.model;
+package com.marco.model;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -100,3 +100,4 @@ public class Pessoa {
   }
 
 }
+

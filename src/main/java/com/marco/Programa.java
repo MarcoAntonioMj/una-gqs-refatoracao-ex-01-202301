@@ -1,10 +1,9 @@
-package main;
-
+package com.marco;
 import java.util.Scanner;
 
-import main.model.Pessoa;
-import main.view.Mensagem;
-import main.view.Validacao;
+import com.marco.model.Pessoa;
+import com.marco.view.Mensagem;
+import com.marco.view.Validacao;
 
 public class Programa {
   public static void main(String[] args) {

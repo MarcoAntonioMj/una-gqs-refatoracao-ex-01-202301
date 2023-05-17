@@ -1,6 +1,8 @@
-package main.controller;
+package com.marco.controller;
 
-import main.model.Pessoa;
+import com.marco.model.Pessoa;
+
+;
 
 public class CalculoPorcentagem {
   public void calculaPorcentagem(Pessoa pessoa) {
@@ -22,3 +24,4 @@ public class CalculoPorcentagem {
     }
   }
 }
+

@@ -1,8 +1,8 @@
-package main.view;
+package com.marco.view;
 
 import java.util.Scanner;
 
-import main.model.Pessoa;
+import com.marco.model.Pessoa;
 
 public class Mensagem {
 
