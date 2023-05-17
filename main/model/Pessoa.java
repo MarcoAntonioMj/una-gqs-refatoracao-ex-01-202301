@@ -1,4 +1,5 @@
 package main.model;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -26,7 +27,7 @@ public class Pessoa {
     System.out.println("\nInforme a sua idade: ");
     try {
       idade = scanner.nextInt();
-    // verifa se foi adicionado algum numero que não seja inteiro
+      // verifa se foi adicionado algum numero que não seja inteiro
     } catch (InputMismatchException e) {
       System.out.println("Entrada inválida. Por favor, digite um número inteiro.");
       scanner.nextLine(); // Limpar o buffer do scanner
