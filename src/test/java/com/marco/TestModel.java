@@ -19,11 +19,13 @@ public class TestModel {
      @Test
    void testColetaIdade(){
        Pessoa pessoa = new Pessoa();
-       double idadeInvalida = 19.5;
-       Assertions.assertThrows(IllegalArgumentException.class, () -> {
-       void setIdade(int idade) ;
+       pessoa.setIdade(25);
+       String mensagemErroEsperada ="Entrada inválida. Por favor, digite um número inteiro.";
+       assertEquals(mensagemErroEsperada, pessoa.getIdade());
 
-    });
+
+
+    };
 }
-}
+
 
