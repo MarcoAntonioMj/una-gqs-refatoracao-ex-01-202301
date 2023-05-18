@@ -24,7 +24,6 @@ public class Programa {
 
       validacao.calcularValidacaoFinal(pessoa, mensagem, erroTentativas);
 
-      Programa.imprimirRelatorioFinal(pessoa); // Adicionei esta linha para imprimir o relatório final
     } // O scanner será fechado automaticamente aqui
   }
 
