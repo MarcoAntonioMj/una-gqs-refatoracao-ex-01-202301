@@ -26,6 +26,8 @@ public class Validacao {
         } else {
           pessoa.orientacaoFinal += " Paciente crítico! Gentileza aguardar em lockdown por 10 dias para ser acompanhado.";
         }
+        Programa.imprimirRelatorioFinal(pessoa);
+
       } else {
         if (pessoa.porcentagemInfeccao <= 30) {
           pessoa.orientacaoFinal = "Paciente sob observação. Caso apareça algum sintoma, gentileza buscar assistência médica.";
