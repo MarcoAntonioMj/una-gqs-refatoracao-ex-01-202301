@@ -1,31 +1,50 @@
 package com.marco;
 
 import org.junit.jupiter.api.Test;
-
 import com.marco.controller.CalculoPorcentagem;
 import com.marco.model.Pessoa;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-/**
- * Unit test for simple App.
- */
 class AppTest {
-    /**
-     * Rigorous Test.
-     */
     @Test
-    void testCalculaPorcentagem_retornandoViagem() {
+    void testCalculaPorcentagem_teveSintomasRecentemente() {
         Pessoa pessoa = new Pessoa();
-        pessoa.estaRetornandoViagem = "SIM";
-        pessoa.cartaoVacinaEmDia = "SIM";
-        pessoa.teveSintomasRecentemente = "NAO";
-        pessoa.teveContatoComPessoasSintomaticas = "NAO";
+        pessoa.setEstaRetornandoViagem("NAO");
+        pessoa.setCartaoVacinaEmDia("NAO");
+        pessoa.setTeveSintomasRecentemente("SIM");
+        pessoa.setTeveContatoComPessoasSintomaticas("NAO");
 
         CalculoPorcentagem calculoPorcentagem = new CalculoPorcentagem();
         calculoPorcentagem.calculaPorcentagem(pessoa);
 
-        assertEquals(30, pessoa.porcentagemInfeccao);
-        assertEquals("Você ficará sob observação por 05 dias.", pessoa.orientacaoFinal);
+        assertEquals(40, pessoa.getPorcentagemInfeccao());
+    }
+
+    @Test
+    void testCalculaPorcentagem_teveContatoComPessoasSintomaticas() {
+        Pessoa pessoa = new Pessoa();
+        pessoa.setEstaRetornandoViagem("NAO");
+        pessoa.setCartaoVacinaEmDia("NAO");
+        pessoa.setTeveSintomasRecentemente("NAO");
+        pessoa.setTeveContatoComPessoasSintomaticas("SIM");
+
+        CalculoPorcentagem calculoPorcentagem = new CalculoPorcentagem();
+        calculoPorcentagem.calculaPorcentagem(pessoa);
+
+        assertEquals(40, pessoa.getPorcentagemInfeccao());
+    }
+
+    @Test
+    void testCalculaPorcentagem_nenhumFatorDeRisco() {
+        Pessoa pessoa = new Pessoa();
+        pessoa.setEstaRetornandoViagem("NAO");
+        pessoa.setCartaoVacinaEmDia("SIM");
+        pessoa.setTeveSintomasRecentemente("NAO");
+        pessoa.setTeveContatoComPessoasSintomaticas("NAO");
+
+        CalculoPorcentagem calculoPorcentagem = new CalculoPorcentagem();
+        calculoPorcentagem.calculaPorcentagem(pessoa);
+
+        assertEquals(0, pessoa.getPorcentagemInfeccao());
     }
 }
