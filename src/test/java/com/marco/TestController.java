@@ -202,4 +202,17 @@ void testCalculaPorcentagem_15_possibilidade() {
 
     assertEquals(40, pessoa.getPorcentagemInfeccao());
 }
+@Test
+void testCalculaPorcentagem_16_possibilidade() {
+    Pessoa pessoa = new Pessoa();
+    pessoa.setEstaRetornandoViagem("NAO");
+    pessoa.setCartaoVacinaEmDia("NAO");
+    pessoa.setTeveSintomasRecentemente("NAO");
+    pessoa.setTeveContatoComPessoasSintomaticas("NAO");
+
+    CalculoPorcentagem calculoPorcentagem = new CalculoPorcentagem();
+    calculoPorcentagem.calculaPorcentagem(pessoa);
+
+    assertEquals(10, pessoa.getPorcentagemInfeccao());
+}
 }
