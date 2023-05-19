@@ -29,6 +29,48 @@ public class TestModel {
 
         assertEquals(idadeEsperada, idadeRetornada);
     }
+
+    @Test
+    void testGetTeveSintomasRecentemente() {
+        Pessoa pessoa = new Pessoa();
+        String TeveSintomasRecentementesperado = "Sim";
+
+        pessoa.setTeveSintomasRecentemente(TeveSintomasRecentementesperado);
+        String TeveSintomasRecentementeRetornado = pessoa.getTeveSintomasRecentemente();
+
+        assertEquals(TeveSintomasRecentementesperado, TeveSintomasRecentementeRetornado);
+    }
+    @Test
+    void testGetcartaoVacinaEmDia() {
+        Pessoa pessoa = new Pessoa();
+        String cartaoVacinaEmDiaEsperado = "Sim";
+
+        pessoa.setCartaoVacinaEmDia(cartaoVacinaEmDiaEsperado);
+        String cartaoVacinaEmDiaRetornado = pessoa.getCartaoVacinaEmDia();
+
+        assertEquals(cartaoVacinaEmDiaEsperado, cartaoVacinaEmDiaRetornado);
+    }
+    @Test
+    void testGetSetTeveContatoComPessoasSintomaticas() {
+        Pessoa pessoa = new Pessoa();
+        String teveContatoCompessoasSintomaticasEsperado = "Sim";
+
+        pessoa.setTeveContatoComPessoasSintomaticas(teveContatoCompessoasSintomaticasEsperado);
+        String TeveContatoComPessoasSintomaticasRetornado = pessoa.getTeveContatoComPessoasSintomaticas();
+
+        assertEquals(teveContatoCompessoasSintomaticasEsperado, TeveContatoComPessoasSintomaticasRetornado);
+    }
+    @Test
+    void testgetEstaRetornandoViagem() {
+        Pessoa pessoa = new Pessoa();
+        String EstaRetornandoViagemEsperado = "Sim";
+
+        pessoa.setEstaRetornandoViagem(EstaRetornandoViagemEsperado);
+        String EstaRetornandoViagemRetornado = pessoa.getEstaRetornandoViagem();
+
+        assertEquals(EstaRetornandoViagemEsperado, EstaRetornandoViagemRetornado);
+    }
 }
+
 
 
