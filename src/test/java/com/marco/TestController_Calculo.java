@@ -5,7 +5,7 @@ import com.marco.controller.CalculoPorcentagem;
 import com.marco.model.Pessoa;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class TestController {
+class TestController_Calculo {
     @Test
     void testCalculaPorcentagem_1_possibilidade() {
         Pessoa pessoa = new Pessoa();

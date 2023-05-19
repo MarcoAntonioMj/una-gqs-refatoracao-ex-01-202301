@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import com.marco.model.Pessoa;
 
-public class TestModel {
+public class TestModel_Pessoa {
     @Test
     void test_get_set_nome() {
         Pessoa pessoa = new Pessoa();
