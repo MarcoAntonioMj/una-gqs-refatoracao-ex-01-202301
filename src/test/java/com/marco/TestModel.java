@@ -2,25 +2,24 @@ package com.marco;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
 import org.junit.jupiter.api.Test;
 
 import com.marco.model.Pessoa;
 
 public class TestModel {
     @Test
-    void testGetSet_Nome() {
+    void test_get_set_nome() {
         Pessoa pessoa = new Pessoa();
-       String nomeEsperado = "marco";
+        String nomeEsperado = "marco";
 
         pessoa.setNome(nomeEsperado);
-        String nomeRetonado = pessoa.getNome();
+        String nomeRetornado = pessoa.getNome();
 
-        assertEquals(nomeEsperado, nomeRetonado);
+        assertEquals(nomeEsperado, nomeRetornado);
     }
 
     @Test
-    void testGetSet_Idade() {
+    void test_get_set_idade() {
         Pessoa pessoa = new Pessoa();
         int idadeEsperada = 30;
 
@@ -31,17 +30,7 @@ public class TestModel {
     }
 
     @Test
-    void testGetTeveSintomasRecentemente() {
-        Pessoa pessoa = new Pessoa();
-        String TeveSintomasRecentementesperado = "Sim";
-
-        pessoa.setTeveSintomasRecentemente(TeveSintomasRecentementesperado);
-        String TeveSintomasRecentementeRetornado = pessoa.getTeveSintomasRecentemente();
-
-        assertEquals(TeveSintomasRecentementesperado, TeveSintomasRecentementeRetornado);
-    }
-    @Test
-    void testGetcartaoVacinaEmDia() {
+    void test_get_set_cartao_vacina_em_dia() {
         Pessoa pessoa = new Pessoa();
         String cartaoVacinaEmDiaEsperado = "Sim";
 
@@ -50,27 +39,64 @@ public class TestModel {
 
         assertEquals(cartaoVacinaEmDiaEsperado, cartaoVacinaEmDiaRetornado);
     }
+
     @Test
-    void testGetSetTeveContatoComPessoasSintomaticas() {
+    void test_get_set_teve_sintomas_recentemente() {
         Pessoa pessoa = new Pessoa();
-        String teveContatoCompessoasSintomaticasEsperado = "Sim";
+        String teveSintomasRecentementeEsperado = "Sim";
 
-        pessoa.setTeveContatoComPessoasSintomaticas(teveContatoCompessoasSintomaticasEsperado);
-        String TeveContatoComPessoasSintomaticasRetornado = pessoa.getTeveContatoComPessoasSintomaticas();
+        pessoa.setTeveSintomasRecentemente(teveSintomasRecentementeEsperado);
+        String teveSintomasRecentementeRetornado = pessoa.getTeveSintomasRecentemente();
 
-        assertEquals(teveContatoCompessoasSintomaticasEsperado, TeveContatoComPessoasSintomaticasRetornado);
+        assertEquals(teveSintomasRecentementeEsperado, teveSintomasRecentementeRetornado);
     }
+
     @Test
-    void testgetEstaRetornandoViagem() {
+    void test_get_set_teve_contato_com_pessoas_sintomaticas() {
         Pessoa pessoa = new Pessoa();
-        String EstaRetornandoViagemEsperado = "Sim";
+        String teveContatoComPessoasSintomaticasEsperado = "Sim";
 
-        pessoa.setEstaRetornandoViagem(EstaRetornandoViagemEsperado);
-        String EstaRetornandoViagemRetornado = pessoa.getEstaRetornandoViagem();
+        pessoa.setTeveContatoComPessoasSintomaticas(teveContatoComPessoasSintomaticasEsperado);
+        String teveContatoComPessoasSintomaticasRetornado = pessoa.getTeveContatoComPessoasSintomaticas();
 
-        assertEquals(EstaRetornandoViagemEsperado, EstaRetornandoViagemRetornado);
+        assertEquals(teveContatoComPessoasSintomaticasEsperado, teveContatoComPessoasSintomaticasRetornado);
+    }
+
+    @Test
+    void test_get_set_esta_retornando_viagem() {
+        Pessoa pessoa = new Pessoa();
+        String estaRetornandoViagemEsperado = "Sim";
+
+        pessoa.setEstaRetornandoViagem(estaRetornandoViagemEsperado);
+        String estaRetornandoViagemRetornado = pessoa.getEstaRetornandoViagem();
+
+        assertEquals(estaRetornandoViagemEsperado, estaRetornandoViagemRetornado);
+    }
+
+    @Test
+    void test_get_set_porcentagem_infeccao() {
+        Pessoa pessoa = new Pessoa();
+        int porcentagemInfeccaoEsperada = 50;
+
+        pessoa.setPorcentagemInfeccao(porcentagemInfeccaoEsperada);
+        int porcentagemInfeccaoRetornada = pessoa.getPorcentagemInfeccao();
+
+        assertEquals(porcentagemInfeccaoEsperada, porcentagemInfeccaoRetornada);
+    }
+
+    @Test
+    void test_get_set_orientacao_final() {
+        Pessoa pessoa = new Pessoa();
+        String orientacaoFinalEsperada = "Ficar em quarentena";
+
+        pessoa.setOrientacaoFinal(orientacaoFinalEsperada);
+        String orientacaoFinalRetornada = pessoa.getOrientacaoFinal();
+
+        assertEquals(orientacaoFinalEsperada, orientacaoFinalRetornada);
     }
 }
+
+
 
 
 
