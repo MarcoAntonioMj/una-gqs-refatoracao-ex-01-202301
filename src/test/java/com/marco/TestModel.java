@@ -2,30 +2,33 @@ package com.marco;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.Assertions;
+
 import org.junit.jupiter.api.Test;
 
 import com.marco.model.Pessoa;
 
 public class TestModel {
     @Test
-    void testColetaNome(){
+    void testGetSet_Nome() {
         Pessoa pessoa = new Pessoa();
-        pessoa.setNome("");
-        String mensagemErroEsperada ="Nome inválido. Por favor, informe um nome válido:";
-        String nomeRetornado = pessoa.getNome();
-        assertEquals(mensagemErroEsperada, nomeRetornado);
+       String nomeEsperado = "marco";
+
+        pessoa.setNome(nomeEsperado);
+        String nomeRetonado = pessoa.getNome();
+
+        assertEquals(nomeEsperado, nomeRetonado);
     }
-     @Test
-   void testColetaIdade(){
-       Pessoa pessoa = new Pessoa();
-       pessoa.setIdade(25);
-       String mensagemErroEsperada ="Entrada inválida. Por favor, digite um número inteiro.";
-       assertEquals(mensagemErroEsperada, pessoa.getIdade());
 
+    @Test
+    void testGetSet_Idade() {
+        Pessoa pessoa = new Pessoa();
+        int idadeEsperada = 30;
 
+        pessoa.setIdade(idadeEsperada);
+        int idadeRetornada = pessoa.getIdade();
 
-    };
+        assertEquals(idadeEsperada, idadeRetornada);
+    }
 }
 
 
