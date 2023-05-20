@@ -67,8 +67,7 @@ public class TestView_Mensagem {
         String mensagemErro = outputStream.toString().trim();
 
         assertEquals(
-                "Não foi possível realizar o diagnóstico. Gentileza procurar ajuda médica caso apareça algum sintoma.",
-                mensagemErro);
+        "Não foi possível realizar o diagnóstico. Gentileza procurar ajuda médica caso apareça algum sintoma.",mensagemErro);
     }
 
 }

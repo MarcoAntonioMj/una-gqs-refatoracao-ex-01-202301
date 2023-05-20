@@ -44,7 +44,6 @@ public class Validacao {
   }
 
   public void validacaoDasProximasPerguntas(Mensagem mensagem, Pessoa pessoa, boolean erroTentativas, Scanner scanner) {
-    // Valido se continuo perguntando ou se vou direto para a mensagem final
     if (!erroTentativas)
       erroTentativas = mensagem.realizaPerguntaTeveSintomasRecenmente(pessoa, scanner);
 
