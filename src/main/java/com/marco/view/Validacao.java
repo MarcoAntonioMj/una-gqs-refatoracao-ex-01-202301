@@ -1,7 +1,6 @@
 package com.marco.view;
 import java.util.Scanner;
 
-import com.marco.Programa;
 import com.marco.controller.CalculoPorcentagem;
 import com.marco.model.Pessoa;
 
