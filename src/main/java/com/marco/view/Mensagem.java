@@ -66,4 +66,16 @@ public class Mensagem {
                 "Não foi possível realizar o diagnóstico. Gentileza procurar ajuda médica caso apareça algum sintoma.");
         System.exit(0);
     }
+
+    public static void imprimirRelatorioFinal(Pessoa pessoa) {
+        System.out.println("\nNome: " + pessoa.nome);
+        System.out.println("Idade: " + pessoa.idade + " anos");
+        System.out.println("Cartão Vacinal em Dia: " + pessoa.cartaoVacinaEmDia);
+        System.out.println("Teve sintomas recentemente: " + pessoa.teveSintomasRecentemente);
+        System.out.println("Teve contato com pessoas infectadas: " + pessoa.teveContatoComPessoasSintomaticas);
+        System.out.println("Está retornando de viagem: " + pessoa.estaRetornandoViagem);
+        System.out.println("Porcentagem infecção: " + pessoa.porcentagemInfeccao);
+        System.out.println("Orientação Final: " + pessoa.orientacaoFinal);
+      }
+
 }
