@@ -13,13 +13,14 @@ public class Programa {
 
             Pessoa pessoa = coletarInformacoesPessoa(scanner);
             Mensagem mensagem = new Mensagem();
-            Validacao validacao = new Validacao();
 
             boolean erroTentativas = mensagem.realizaPerguntaVacinaEmDia(pessoa, scanner);
 
-            validacao.validacaoDasProximasPerguntas(mensagem, pessoa, erroTentativas, scanner);
+            Validacao validacao = new Validacao();
 
-            validacao.calcularValidacaoFinal(pessoa, mensagem, erroTentativas);
+            validacao.validacaoDasProximasPerguntas(pessoa, erroTentativas, scanner);
+
+            validacao.calcularValidacaoFinal(pessoa, erroTentativas);
 
         } // O scanner será fechado automaticamente aqui
     }
@@ -30,5 +31,6 @@ public class Programa {
         pessoa.coletaIdade(scanner);
         return pessoa;
     }
-
 }
+
+

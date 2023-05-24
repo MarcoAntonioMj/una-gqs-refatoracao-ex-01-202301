@@ -38,26 +38,26 @@ public class Mensagem {
 
     public boolean realizaPerguntaVacinaEmDia(Pessoa pessoa, Scanner scanner) {
         System.out.println("\nSeu cartão de vacina está em dia?");
-        pessoa.cartaoVacinaEmDia = lerRespostaValida(scanner);
+        pessoa.setCartaoVacinaEmDia(lerRespostaValida(scanner));
         return contador == MAX_TENTATIVAS;
     }
 
     public boolean realizaPerguntaTeveSintomasRecenmente(Pessoa pessoa, Scanner scanner) {
         System.out.println(
                 "\nTeve algum dos sintomas recentemente? (dor de cabeça, febre, náusea, dor articular, gripe)");
-        pessoa.teveSintomasRecentemente = lerRespostaValida(scanner);
+        pessoa.setTeveSintomasRecentemente(lerRespostaValida(scanner));
         return contador == MAX_TENTATIVAS;
     }
 
     public boolean realizaPerguntaTeveContatoPessoasAssintomaticas(Pessoa pessoa, Scanner scanner) {
         System.out.println("\nTeve contato com pessoas com sintomas gripais nos últimos dias?");
-        pessoa.teveContatoComPessoasSintomaticas = lerRespostaValida(scanner);
+        pessoa.setTeveContatoComPessoasSintomaticas(lerRespostaValida(scanner));
         return contador == MAX_TENTATIVAS;
     }
 
     public boolean realizaPerguntaEstaRetornandoViagemExterior(Pessoa pessoa, Scanner scanner) {
         System.out.println("\nEstá retornando de viagem do exterior?");
-        pessoa.estaRetornandoViagem = lerRespostaValida(scanner);
+        pessoa.setEstaRetornandoViagem(lerRespostaValida(scanner));
         return contador == MAX_TENTATIVAS;
     }
 
@@ -68,14 +68,15 @@ public class Mensagem {
     }
 
     public static void imprimirRelatorioFinal(Pessoa pessoa) {
-        System.out.println("\nNome: " + pessoa.nome);
-        System.out.println("Idade: " + pessoa.idade + " anos");
-        System.out.println("Cartão Vacinal em Dia: " + pessoa.cartaoVacinaEmDia);
-        System.out.println("Teve sintomas recentemente: " + pessoa.teveSintomasRecentemente);
-        System.out.println("Teve contato com pessoas infectadas: " + pessoa.teveContatoComPessoasSintomaticas);
-        System.out.println("Está retornando de viagem: " + pessoa.estaRetornandoViagem);
-        System.out.println("Porcentagem infecção: " + pessoa.porcentagemInfeccao);
-        System.out.println("Orientação Final: " + pessoa.orientacaoFinal);
-      }
+        System.out.println("\nNome: " + pessoa.getNome());
+        System.out.println("Idade: " + pessoa.getIdade() + " anos");
+        System.out.println("Cartão Vacinal em Dia: " + pessoa.getCartaoVacinaEmDia());
+        System.out.println("Teve sintomas recentemente: " + pessoa.getTeveSintomasRecentemente());
+        System.out.println("Teve contato com pessoas infectadas: " + pessoa.getTeveContatoComPessoasSintomaticas());
+        System.out.println("Está retornando de viagem: " + pessoa.getEstaRetornandoViagem());
+        System.out.println("Porcentagem infecção: " + pessoa.getPorcentagemInfeccao());
+        System.out.println("Orientação Final: " + pessoa.getOrientacaoFinal());
+    }
 
 }
+
